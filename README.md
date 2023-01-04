@@ -2,7 +2,7 @@
 	<br>
     <h1>Morning Metrics</h1>
 	<p>Do more with your metrics.</p>
-	<a href="https://www.npmjs.com/package/morning.js"><img src="https://img.shields.io/npm/v/morning.js" alt="NPM Version"></a>
+	<a href="https://www.npmjs.com/package/morning-js"><img src="https://img.shields.io/npm/v/morning-js" alt="NPM Version"></a>
 	<a href="https://docs.morning.so"><img src="https://img.shields.io/badge/Docs-LogSnag" alt="Documentation"></a>
 	<br>
 	<br>
@@ -12,7 +12,7 @@
 ## Installation
 
 ```sh
-npm install --save morning.js
+npm install --save morning-js
 ```
 
 ## Usage
