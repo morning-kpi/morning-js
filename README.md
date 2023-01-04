@@ -2,6 +2,7 @@
 	<br>
     <h1>Morning Metrics</h1>
 	<p>Do more with your metrics.</p>
+	<a href="https://github.com/morning-kpi/morning-js/actions/workflows/npm-publish.yml"><img src="https://github.com/morning-kpi/morning-js/actions/workflows/npm-publish.yml/badge.svg" alt="Build" /></a>
 	<a href="https://www.npmjs.com/package/morning-js"><img src="https://img.shields.io/npm/v/morning-js" alt="NPM Version"></a>
 	<a href="https://docs.morning.so"><img src="https://img.shields.io/badge/Docs-LogSnag" alt="Documentation"></a>
 	<br>
