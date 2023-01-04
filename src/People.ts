@@ -13,7 +13,7 @@ export default class People extends Endpoint {
 		if(!email && !personId) {
 			throw new Error('You must specify an email or a personId to search');
 		}
-		const endpoint = `${this.path}/search?${email ? `email=${email}` : ''}${email ? `email=${email}` : ''}`;
+		const endpoint = `${this.path}/search?${email ? `email=${email}` : ''}${personId ? `personId=${personId}` : ''}`;
 		const { data } = await this.client.get(endpoint);
 		return data;
 	}
