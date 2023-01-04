@@ -9,7 +9,7 @@ export default class Metrics extends Endpoint {
 			value,
 			...(profile || {})
 		};
-		return this.client.post(endpoint, payload)
+		return this.client.put(endpoint, payload)
 	}
 
 	decrement(metricId: string, value: number, profile?: ProfilePayload) {
@@ -19,7 +19,7 @@ export default class Metrics extends Endpoint {
 			value,
 			...(profile || {})
 		};
-		return this.client.post(endpoint, payload)
+		return this.client.put(endpoint, payload)
 	}
 
 	set(metricId: string, value: number, profile?: ProfilePayload) {
@@ -29,6 +29,6 @@ export default class Metrics extends Endpoint {
 			value,
 			...(profile || {})
 		};
-		return this.client.post(endpoint, payload)
+		return this.client.put(endpoint, payload)
 	}
 }
