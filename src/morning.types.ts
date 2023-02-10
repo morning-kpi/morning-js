@@ -48,6 +48,7 @@ export type CompanyDetail = Company & {
 export type Metric = {
   id: string;
   value: number;
+  totalValue: number;
   valueTrailingSevenDays: number | null;
   valueTrailingThirtyDays: number | null;
   valueMonthToDate: number | null;
