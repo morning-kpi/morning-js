@@ -12,7 +12,7 @@ export abstract class Endpoint {
 		this._logger = Logger.getLogger({ name: this.constructor.name });
 	}
 	async get(id: string): Promise<MorningResponse<unknown>> {
-		const endpoint = `${this.path}/${id}`;
+		const endpoint = `${this.path}/${encodeURIComponent(id)}`;
 		this._logger.debug(`${endpoint}`);
 		const resp: AxiosResponse = await this.client.get(endpoint);
 		this._logger.debug(`response status: ${resp.status}`);
