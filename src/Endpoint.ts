@@ -1,4 +1,4 @@
-import {AxiosInstance, AxiosResponse} from 'axios';
+import {AxiosError, AxiosInstance, AxiosResponse} from 'axios';
 import { MorningResponse } from './morning.types';
 import { Logger } from 'sitka';
 
@@ -14,8 +14,19 @@ export abstract class Endpoint {
 	async get(id: string): Promise<MorningResponse<unknown>> {
 		const endpoint = `${this.path}/${encodeURIComponent(id)}`;
 		this._logger.debug(`${endpoint}`);
-		const resp: AxiosResponse = await this.client.get(endpoint);
-		this._logger.debug(`response status: ${resp.status}`);
-		return resp.data;
+		try {
+			const resp: AxiosResponse = await this.client.get(endpoint);
+			this._logger.debug(`response status: ${resp.status}`);
+			return {
+				status: true,
+				data: resp.data,
+			};
+		} catch (error) {
+			const axiosError = error as AxiosError;
+			return {
+				status: false,
+				data: axiosError.response?.data,
+			}
+		}
 	}
 }
