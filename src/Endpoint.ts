@@ -1,6 +1,7 @@
 import {AxiosError, AxiosInstance, AxiosResponse} from 'axios';
 import { MorningResponse } from './morning.types';
 import { Logger } from 'sitka';
+import MorningError from './MorningError';
 
 export abstract class Endpoint {
 	client: AxiosInstance;
@@ -23,10 +24,10 @@ export abstract class Endpoint {
 			};
 		} catch (error) {
 			const axiosError = error as AxiosError;
-			return {
-				status: false,
-				data: axiosError.response?.data,
+			if(!axiosError.response) {
+				throw error;
 			}
+			throw new MorningError(axiosError.message, axiosError.response?.status, axiosError.response?.data);
 		}
 	}
 }
