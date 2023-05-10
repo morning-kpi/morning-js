@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://morning.so/img/logo.png?version=93477fe0b416ea25843f362fb677d95d" alt="Morning Metrics" />
+<img src="https://www.morning.so/_next/static/media/metadata/favicon.72449951.ico" alt="Morning Metrics" height="40" />
 	<br>
 	<p>Do more with your metrics.</p>
 	<a href="https://github.com/morning-kpi/morning-js/actions/workflows/npm-publish.yml"><img src="https://github.com/morning-kpi/morning-js/actions/workflows/npm-publish.yml/badge.svg" alt="Build" /></a>
