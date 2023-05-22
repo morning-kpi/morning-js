@@ -67,3 +67,7 @@ export type Metric = {
   person?: Person;
   company?: Company;
 }
+
+export type ProfileMetricResponse = {
+  metric: Metric | boolean;
+};

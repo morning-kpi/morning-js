@@ -1,6 +1,6 @@
 {
   "name": "morning-js",
-  "version": "1.0.0-beta5",
+  "version": "1.0.0-beta6",
   "description": "A typescript client for Morning Metrics.",
   "keywords": [
     "typescript"
